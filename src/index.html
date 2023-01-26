@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="css/calender.css">
+    <link rel="stylesheet" href="css/ScheduleEvent.css">
+    <script src="js/calender.js"></script>
+    <script src="js/ScheduleEvent.js"></script>
+    
+  </head>
+  <body>
+    <h1>💖 Hello World!</h1>
+    <p>Welcome to your Electron application.</p>
+    <div class="wrapper">
+      <!-- xxxx年xx月を表示 -->
+      <h1 id="header"></h1>
+  
+      <!-- ボタンクリックで月移動 -->
+      <div id="next-prev-button">
+          <button id="prev" onclick="prev()">‹</button>
+          <button id="next" onclick="next()">›</button>
+      </div>
+  
+      <!-- カレンダー -->
+      <div id="calendar"></div>
+    </div>
+    <div class="schedule-event">
+      <div id="schedule">schedule</div>
+    </div>
+  </body>
+</html>

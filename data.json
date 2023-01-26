@@ -1,0 +1,67 @@
+{
+    "user":[
+        {
+            "name":"test",
+            "id":1,
+            "Disable":false,
+            "Position":"経理"
+        },
+        {
+            "name":"test2",
+            "id":2,
+            "Disable":false,
+            "Position":"開発"
+        },
+        {
+            "name":"test3",
+            "id":3,
+            "Disable":true,
+            "Position":"開発"
+        }
+    ],
+    "Schedule":[
+        {
+            "StartDatetime":"2023-01-16 08:30:00",
+            "EndDatetime":"2023-01-16 12:00:00",
+            "type":"検討",
+            "user":"test"
+        },
+        {
+            "StartDatetime":"2023-01-16 13:00:00",
+            "EndDatetime":"2023-01-16 14:00:00",
+            "type":"実験",
+            "user":"test"
+        },
+        {
+            "StartDatetime":"2023-01-17 13:00:00",
+            "EndDatetime":"2023-01-17 16:00:00",
+            "type":"打合せ",
+            "user":"test"
+        },
+        {
+            "StartDatetime":"2023-01-17 13:00:00",
+            "EndDatetime":"2023-01-17 16:00:00",
+            "type":"打合せ",
+            "user":"test2"
+        },
+        {
+            "StartDatetime":"2023-01-17 16:00:00",
+            "EndDatetime":"2023-01-17 17:00:00",
+            "type":"実験",
+            "user":"test2"
+        },
+        {
+            "StartDatetime":"2023-01-17 13:00:00",
+            "EndDatetime":"2023-01-17 14:00:00",
+            "type":"帰り",
+            "user":"test3"
+        },
+        {
+            "StartDatetime":"2023-01-15 13:00:00",
+            "EndDatetime":"2023-01-15 16:00:00",
+            "type":"未定",
+            "user":"test2"
+        }
+    ]
+    
+}

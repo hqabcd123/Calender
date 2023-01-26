@@ -1,6 +1,13 @@
 .schedule-event{
-    position: relative;
     display: block;
-    margin-right: 70px;
     color: brown;
+}
+
+.schedule-event table{
+    margin: auto;
+}
+
+#schedule-Column{
+    border: solid black 1px;
+    height: 20px;
 }

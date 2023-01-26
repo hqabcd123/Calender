@@ -9,12 +9,14 @@ if (require('electron-squirrel-startup')) {
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    show:false
+    // show:false,
     // width: 800,
     // height: 600,
-    // webPreferences: {
-    //   preload: path.join(__dirname, 'preload.js'),
-    // },
+    webPreferences: {
+      nodeIntegration: true,
+      contextIsolation: false,
+      // preload: path.join(__dirname, 'preload.js'),
+    },
   });
   mainWindow.maximize();
   mainWindow.show()

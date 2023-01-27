@@ -1,13 +1,19 @@
 .schedule-event{
     display: block;
+    max-width: fit-content;
+    margin: auto;
     color: brown;
 }
 
-.schedule-event table{
-    margin: auto;
+#schedule table{
+    width: auto;
+    position: relative;
 }
 
-#schedule-Column{
-    border: solid black 1px;
+.schedule-event .DayColumn{
+    float: left;
+}
+
+.schedule-Column{
     height: 20px;
 }

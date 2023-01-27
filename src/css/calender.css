@@ -5,6 +5,7 @@
     margin-right: auto;
     /* margin: 0 auto; */ /* This mean margin wrapper to center */
     color: #666;
+    float: left;
 }
 #header {
     text-align: center;

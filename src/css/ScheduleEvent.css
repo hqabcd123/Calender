@@ -2,6 +2,7 @@
     display: block;
     max-width: fit-content;
     margin: auto;
+    padding-left: 20px;
     color: brown;
 }
 

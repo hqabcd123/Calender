@@ -21,6 +21,33 @@ const createOneDaySchedule = () => {
     return str;
 }
 
+class ScheduleObj {
+    constructor (StartDatetime, EndDatetime, user, type){
+        this.StartDatetime = StartDatetime;
+        this.EndDatetime = EndDatetime;
+        this.user = user;
+        this.type = type;
+        console.log(this.user);
+    }
+
+    get User() {
+        return this.user;
+    }
+
+    set User(user){
+        this.user = user
+    }
+}
+
+const SetSchedule = (json) => {
+    let data = json['Schedule'];
+    data.forEach(element => {
+        let startd = new Date(element['StartDatetime']);
+        let endd = new Date(element['EndDatetime']);
+        new ScheduleObj(startd, endd, element['user'], element['type']);
+    });
+}
+
 const ReadJsonFile = () => {
     let json = JSON.parse(fs.readFileSync(path));
     console.log(json);
@@ -30,6 +57,7 @@ const ReadJsonFile = () => {
     } catch (error) {
         console.log(error);
     }
+    SetSchedule(json);
 }
 
 $(document).ready(ReadJsonFile);

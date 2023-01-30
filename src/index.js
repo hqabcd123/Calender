@@ -1,10 +1,42 @@
-const { app, BrowserWindow } = require('electron');
+const { app, Menu, BrowserWindow } = require('electron');
 const path = require('path');
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) {
   app.quit();
 }
+
+const template = Menu.buildFromTemplate(
+  [
+    {
+      label: "ファイル",
+      submenu: [
+        { role:'close', label:'ウィンドウを閉じる' }
+      ]
+    },
+    {
+      label: "編集",
+      submenu: [
+        { role:'undo',  label:'元に戻す' },
+        { role:'redo',  label:'やり直す' },
+        { type:'separator' },
+        { role:'cut',   label:'切り取り' },
+        { role:'copy',  label:'コピー' },
+        { role:'paste', label:'貼り付け' },
+      ]
+    },
+    {
+      label: "スケージュル",
+      submenu: [
+        {label:'スケージュル表示', click(){
+          console.log('dhidjwid')
+        }}
+      ]
+    },
+  ]
+)
+
+Menu.setApplicationMenu(template);
 
 const createWindow = () => {
   // Create the browser window.
@@ -22,7 +54,7 @@ const createWindow = () => {
   mainWindow.show()
 
   // and load the index.html of the app.
-  mainWindow.loadFile(path.join(__dirname, 'index.html'));
+  mainWindow.loadFile(path.join(__dirname, './html/index.html'));
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools();
